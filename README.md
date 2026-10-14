@@ -2,6 +2,8 @@
 
 Sell an at-the-money straddle and delta hedge it with SPY shares. The P&L depends on implied versus realised volatility. The notebook checks this on simulated prices, then on real SPY data from 2010 to 2025.
 
+A short note with the method and results: [note/spy-delta-hedging.pdf](note/spy-delta-hedging.pdf).
+
 ## Method
 
 - Black-Scholes price and delta (with dividend yield) for a one-month at-the-money straddle.
