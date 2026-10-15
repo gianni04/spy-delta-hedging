@@ -6,9 +6,9 @@ A short note with the method and results: [note/spy-delta-hedging.pdf](note/spy-
 
 ## Method
 
-- Black-Scholes price and delta (with dividend yield) for a one-month at-the-money straddle.
+- Black-Scholes (Black and Scholes, 1973) price and delta (with dividend yield) for a one-month at-the-money straddle.
 - Simulation: 5,000 price paths with 20% realised vol. The straddle is sold at 20% or 25% vol and hedged between 1 and 252 times a month. Costs are 0.1% per trade in one run.
-- Real data: every 21 trading days, sell a 21-day ATM straddle on SPY and hedge it daily (191 non-overlapping trades). Implied vol from VIX, rate from the 13-week T-bill, actual dividends, 1 bp per share trade.
+- Real data: every 21 trading days, sell a 21-day ATM straddle on SPY and hedge it daily (191 non-overlapping trades). Implied vol from VIX (Cboe methodology), rate from the 13-week T-bill, actual dividends, 1 bp per share trade.
 
 ## Results
 
@@ -39,3 +39,8 @@ SPY, ^VIX, ^IRX and SPY dividends from Yahoo Finance, read with `yfinance`. No h
 pip install -r requirements.txt
 jupyter notebook delta_hedging.ipynb
 ```
+
+## References
+
+- Black, F. and Scholes, M. (1973). The pricing of options and corporate liabilities. Journal of Political Economy, 81(3), 637-654. https://doi.org/10.1086/260062
+- Cboe Global Indices. Cboe Volatility Index methodology (VIX white paper). https://cdn.cboe.com/resources/indices/Volatility_Index_Methodology_Cboe_Volatility_Index.pdf
